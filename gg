@@ -1,0 +1,65 @@
+import { Mail, Linkedin, Bug } from "lucide-react";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-black text-white p-6 font-sans">
+      <section className="max-w-4xl mx-auto text-center py-10">
+        <h1 className="text-4xl font-bold mb-4">Md Mahaadi</h1>
+        <p className="text-lg text-gray-400 mb-4">
+          Game Tester · QA Tester · User Feedback Specialist
+        </p>
+        <div className="flex justify-center gap-4 mb-8 flex-wrap">
+          <a
+            href="mailto:your.email@example.com"
+            className="px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+          >
+            <Mail className="inline-block mr-2 w-4 h-4" />
+            your.email@example.com
+          </a>
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            className="px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+          >
+            <Linkedin className="inline-block mr-2 w-4 h-4" />
+            linkedin.com/in/yourprofile
+          </a>
+        </div>
+      </section>
+
+      <section className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+        {[
+          {
+            title: "Game Testing",
+            content:
+              "Tested PC and console games, focusing on gameplay, mechanics, balance, and user experience.",
+          },
+          {
+            title: "QA Testing",
+            content:
+              "Skilled in manual and automated QA. Tools: JIRA, Bugzilla, TestRail.",
+          },
+          {
+            title: "User Feedback",
+            content:
+              "Collected, analyzed player data and feedback to improve design and engagement.",
+          },
+          {
+            title: "Bug Reporting",
+            content:
+              "Tracked bugs with detailed reproduction steps and severity ranking.",
+          },
+        ].map((card, i) => (
+          <div key={i} className="bg-zinc-900 p-6 rounded-xl">
+            <h2 className="text-2xl font-semibold mb-2">{card.title}</h2>
+            <p className="text-gray-400">{card.content}</p>
+          </div>
+        ))}
+      </section>
+
+      <footer className="text-center text-gray-500 mt-10">
+        <p>&copy; {new Date().getFullYear()} Md Mahaadi. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+}
