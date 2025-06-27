@@ -1,0 +1,5 @@
+/pages
+  └── index.tsx (or index.js)
+/public
+/styles
+package.json
